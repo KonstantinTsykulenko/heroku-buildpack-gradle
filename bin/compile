@@ -35,6 +35,7 @@ fi
 export GRADLE_USER_HOME=$CACHE_DIR
 
 if [ -f $BUILD_DIR/gradlew ] ; then
+  chmod 777 $BUILD_DIR/gradlew
   BUILDCMD="./gradlew"
 else
   if [ ! -d $CACHE_DIR/$GRADLE_DIST ] ; then
